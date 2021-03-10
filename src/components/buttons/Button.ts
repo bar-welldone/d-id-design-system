@@ -10,7 +10,7 @@ const Button = styled.button`
   height: 40px;
   padding: 8px 16px;
   border-radius: 8px;
-  color: white;
+  color: #FFFFFF;
   ${typography.Button}
 `
 

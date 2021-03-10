@@ -5,9 +5,13 @@ const colors = {
   'Orange - Yellow': 'linear-gradient(90deg, #EE280D 0%, #FFAD0F 100%)',
   'Yellow - Orange': 'linear-gradient(90deg, #FFAD0F 0%, #EE280D 100%)',
   'Orange': '#F6630E',
+
   'Text/Primary': '#28282B',
+  'Text/Primary Light': 'white',
   'Text/Secondary': '#5E5E60',
-  'Text / Secondary Light': 'rgba(255, 255, 255, 0.6)'
+  'Text / Secondary Light': 'rgba(255, 255, 255, 0.6)',
+
+  'Border/Light': 'rgba(255, 255, 255, 0.2)'
 }
 
 export default colors
