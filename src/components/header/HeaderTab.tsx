@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import colors from "../../tokens/Colors";
+import Colors from "../../tokens/Colors";
 import typography from "../../tokens/Typography";
 
 interface StyledProps {
   selected?: boolean
+  activeColor?: string
 }
 
 const HeaderTabStyled = styled.button<StyledProps>`
@@ -13,11 +14,16 @@ const HeaderTabStyled = styled.button<StyledProps>`
     props => props.selected ? 
       ` 
         ${typography.Headline5};
-        color: ${colors.Orange};
+        color: ${props.activeColor};
       ` :
       `
         ${typography.Body};
-        color: ${colors["Text / Secondary Light"]};
+        color: ${Colors["Text / Secondary Light"]};
+
+        &:hover {
+          ${typography.Headline5};
+          color: #FFFFFF;
+        }
       `
   }
 `
@@ -25,11 +31,12 @@ const HeaderTabStyled = styled.button<StyledProps>`
 interface Props {
   text: string
   selected?: boolean
+  activeColor?: string
 }
 
-const HeaderTab = ({text, selected}: Readonly<Props>) => {
+const HeaderTab = ({text, selected, activeColor = Colors.Primary}: Readonly<Props>) => {
   return (
-    <HeaderTabStyled selected={selected}>
+    <HeaderTabStyled selected={selected} activeColor={activeColor}>
       {text}
     </HeaderTabStyled>
   )

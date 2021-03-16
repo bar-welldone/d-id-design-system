@@ -8,13 +8,3 @@
 .App > * {
   margin-top: 12px
 }
-
-button {
-  border: none;
-  background: none;
-  outline: none;
-}
-
-input {
-  outline: none;
-}

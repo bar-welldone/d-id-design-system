@@ -22,8 +22,8 @@ const OptionsContainer = styled.div`
 `
 
 interface Props {
-  renderTabs: () => ReactNode
-  renderOptions: () => ReactNode
+  renderTabs(): ReactNode
+  renderOptions(): ReactNode
 }
 
 const Header = ({renderTabs, renderOptions}: Readonly<Props>) => {

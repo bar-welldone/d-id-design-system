@@ -1,8 +1,11 @@
 import styled from "styled-components"
 import typography from "../../tokens/Typography"
 
-
-const Button = styled.button`
+interface Props {
+  noText?: boolean
+}
+const Button = styled.button<Props>`
+  ${typography.Button};
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -11,7 +14,13 @@ const Button = styled.button`
   padding: 8px 16px;
   border-radius: 8px;
   color: #FFFFFF;
-  ${typography.Button}
+
+  svg {
+    path {
+      fill: currentColor;
+    }
+    margin-right: ${props => props.noText ? '0' : '8px'}
+  }
 `
 
 export default Button
